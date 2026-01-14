@@ -1,0 +1,64 @@
+/* ====== Base ====== */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px;
+  text-align: left; /* <-- importantísimo */
+}
+
+/* ====== Cards ====== */
+.card {
+  padding: 14px;            /* antes 2em (gigante) */
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  border-radius: 14px;
+  background: #fff;
+}
+
+/* Si tu app ya tenía sombra/bordes, podés borrar estas 3 líneas de arriba */
+
+/* ====== Grids ====== */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr)); /* 4 cards */
+  gap: 12px;
+}
+
+/* Responsive: baja columnas según pantalla */
+@media (max-width: 1100px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Opcional: pills y muted si no existen */
+.muted {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  background: rgba(0, 0, 0, 0.02);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* Botón base (si no tenés estilos) */
+.btn {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 800;
+}
